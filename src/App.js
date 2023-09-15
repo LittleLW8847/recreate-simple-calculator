@@ -20,6 +20,12 @@ function App() {
 
   function divide(){
     setResult((result) => result / Number(inputRef.current.value));
+    if(result.current.value==Infinity){
+      <div>
+        <p>Result: Infinity now we will reset it</p>
+      </div>
+      setResult(0);
+    }
   }
   
   return (
