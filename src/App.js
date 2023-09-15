@@ -29,7 +29,7 @@ function App() {
   }
 
   function resetResult(){
-    setResult(0);//this is a temporary solution, i did hear from my experienced friend that this isn't the best way to go about this
+    setResult(0);//this is a temporary solution, i did hear from my experienced friend that this isn't the best way to go about this and the whole x/0 = infinity stuff
   }
 
   function resetInput(){
@@ -50,8 +50,7 @@ function App() {
     </div>
   );
 
-  /*
-  */
+
 }
 
 export default App;
