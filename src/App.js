@@ -20,12 +20,20 @@ function App() {
 
   function divide(){
     setResult((result) => result / Number(inputRef.current.value));
-    if(result.current.value==Infinity){
+    /*if(result.current.value==Infinity){ okay let's move on to other part first 
       <div>
         <p>Result: Infinity now we will reset it</p>
       </div>
       setResult(0);
-    }
+    }*/
+  }
+
+  function resetResult(){
+    setResult(0);//this is a temporary solution, i did hear from my experienced friend that this isn't the best way to go about this
+  }
+
+  function resetInput(){
+    inputRef.current.value=0;
   }
   
   return (
@@ -37,12 +45,13 @@ function App() {
       <button onClick={minus}>Subtract</button>
       <button onClick={multiply}>Multiply</button>
       <button onClick={divide}>Devide</button>
-
+      <button onClick={resetResult}>Reset Result</button>
+      <button onClick={resetInput}>Reset Input</button>
     </div>
   );
 
-  /*<button onClick={resetResult}>Reset Result</button>
-  <button onClick={resetInput}>Reset Input</button>*/
+  /*
+  */
 }
 
 export default App;
