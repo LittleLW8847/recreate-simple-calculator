@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import {useState, useRef} from "react";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <h1>Simple Calculator</h1>
+      <input pattern="[0-9]" type="number" placeholder="your number, please"></input>
+      <button>Add</button>
+      <button>Subtract</button>
+      <button>Multiply</button>
+      <button>Devide</button>
+      <button>Reset Result</button>
+      <button>Reset Input</button>
     </div>
   );
 }
