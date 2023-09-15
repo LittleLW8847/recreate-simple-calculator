@@ -6,7 +6,20 @@ function App() {
   const [result, setResult] = useState(0);//this is a calculator app, it is bound to have one variable to keep result to do with future operations
   
   function plus(){
-    result = result + Number(inputRef.current.value);//okay i try this out of curiosity, to know what will be the error now i know
+    //result = result + Number(inputRef.current.value); okay i try this out of curiosity, to know what will be the error now i know
+    setResult((result) => result + Number(inputRef.current.value));
+  }
+
+  function minus(){
+    setResult((result) => result - Number(inputRef.current.value));
+  }
+
+  function multiply(){
+    setResult((result) => result * Number(inputRef.current.value));
+  }
+
+  function divide(){
+    setResult((result) => result / Number(inputRef.current.value));
   }
   
   return (
@@ -18,10 +31,12 @@ function App() {
       <button onClick={minus}>Subtract</button>
       <button onClick={multiply}>Multiply</button>
       <button onClick={divide}>Devide</button>
-      <button onClick={resetResult}>Reset Result</button>
-      <button onClick={resetInput}>Reset Input</button>
+
     </div>
   );
+
+  /*<button onClick={resetResult}>Reset Result</button>
+  <button onClick={resetInput}>Reset Input</button>*/
 }
 
 export default App;
