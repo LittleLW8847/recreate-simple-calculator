@@ -5,9 +5,11 @@ function App() {
   const inputRef = useRef(null);//to access number input in the input form
   const [result, setResult] = useState(0);//this is a calculator app, it is bound to have one variable to keep result to do with future operations
   
+  function plus(){
+    result = result + Number(inputRef.current.value);//okay i try this out of curiosity, to know what will be the error now i know
+  }
   
   return (
-    
     <div>
       <h1>Simple Calculator</h1>
       <p>Result: {result}</p>
