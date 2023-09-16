@@ -20,12 +20,12 @@ function App() {
 
   function divide(){
     setResult((result) => result / Number(inputRef.current.value));
-    /*if(result.current.value==Infinity){ okay let's move on to other part first 
+    if(result===Infinity){ //okay let's move on to other part first 
       <div>
         <p>Result: Infinity now we will reset it</p>
       </div>
       setResult(0);
-    }*/
+    }
   }
 
   function resetResult(){
@@ -35,6 +35,13 @@ function App() {
   function resetInput(){
     inputRef.current.value=0;
   }
+
+    console.log("Result: "+ result);
+
+
+  /*function numberInput(){
+
+  }*/
   
   return (
     <div>
@@ -47,10 +54,20 @@ function App() {
       <button onClick={divide}>Devide</button>
       <button onClick={resetResult}>Reset Result</button>
       <button onClick={resetInput}>Reset Input</button>
+      
     </div>
   );
 
-
+ /*<button onClick={numberInput} className="numberButton" ref={inputRef}>1</button>
+      <button onClick={numberInput} className="numberButton">2</button>
+      <button onClick={numberInput} className="numberButton">3</button>
+      <button onClick={numberInput} className="numberButton">4</button>
+      <button onClick={numberInput} className="numberButton">5</button>
+      <button onClick={numberInput} className="numberButton">6</button>
+      <button onClick={numberInput} className="numberButton">7</button>
+      <button onClick={numberInput} className="numberButton">8</button>
+      <button onClick={numberInput} className="numberButton">9</button>
+      <button onClick={numberInput} className="numberButton">0</button>*/ 
 }
 
 export default App;
