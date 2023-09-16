@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const inputRef = useRef(null);//to access number input in the input form
+  const buttonRef = useRef(null);//i'm not sure if this is the correct way
   const [result, setResult] = useState(0);//this is a calculator app, it is bound to have one variable to keep result to do with future operations
   
   function plus(){
@@ -53,19 +54,20 @@ function App() {
       <button onClick={resetResult}>Reset Result</button>
       <button onClick={resetInput}>Reset Input</button>
       
+      <button  className="numberButton">1</button>
+      <button  className="numberButton">2</button>
+      <button  className="numberButton">3</button>
+      <button  className="numberButton">4</button>
+      <button  className="numberButton">5</button>
+      <button  className="numberButton">6</button>
+      <button  className="numberButton">7</button>
+      <button className="numberButton">8</button>
+      <button  className="numberButton">9</button>
+      <button  className="numberButton">0</button>
     </div>
   );
 
- /*<button onClick={numberInput} className="numberButton" ref={inputRef}>1</button>
-      <button onClick={numberInput} className="numberButton">2</button>
-      <button onClick={numberInput} className="numberButton">3</button>
-      <button onClick={numberInput} className="numberButton">4</button>
-      <button onClick={numberInput} className="numberButton">5</button>
-      <button onClick={numberInput} className="numberButton">6</button>
-      <button onClick={numberInput} className="numberButton">7</button>
-      <button onClick={numberInput} className="numberButton">8</button>
-      <button onClick={numberInput} className="numberButton">9</button>
-      <button onClick={numberInput} className="numberButton">0</button>*/ 
+ /**/ 
 }
 
 export default App;
