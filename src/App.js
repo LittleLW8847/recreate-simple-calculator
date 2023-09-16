@@ -20,16 +20,14 @@ function App() {
 
   function divide(){
     setResult((result) => result / Number(inputRef.current.value));
-    if(result===Infinity){ //okay let's move on to other part first 
-      <div>
-        <p>Result: Infinity now we will reset it</p>
-      </div>
-      setResult(0);
-    }
   }
 
   function resetResult(){
-    setResult(0);//this is a temporary solution, i did hear from my experienced friend that this isn't the best way to go about this and the whole x/0 = infinity stuff
+    setResult((result) => result * 0);//this is a temporary solution, i did hear from my experienced friend that this isn't the best way to go about this and the whole x/0 = infinity stuff
+    if(result===Infinity){ //this if exist for the sole purpose of if result is infinity so you can't just reset result by * with 0
+      console.log("to infinity and beyond");
+      setResult(0);
+    }
   }
 
   function resetInput(){
