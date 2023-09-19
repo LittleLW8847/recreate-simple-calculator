@@ -49,23 +49,24 @@ function App() {
       <p>here is your input: {numberValue}</p>
       <p>Result: {result}</p>
       <input pattern="[0-9]" type="number" placeholder="your number, please" ref={inputRef}></input>
-      <button onClick={plus}>Add</button>
-      <button onClick={minus}>Subtract</button>
-      <button onClick={multiply}>Multiply</button>
-      <button onClick={divide}>Devide</button>
+      <button onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)/*plus*/} value="+">Add</button>
+      <button onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)/*minus*/} value="-">Subtract</button>
+      <button onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)/*multiply*/} value="*">Multiply</button>
+      <button onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)/*divide*/} value="/">Devide</button>
       <button onClick={resetResult}>Reset Result</button>
       <button onClick={resetInput}>Reset Input</button>
       
-      <button  className="numberButton" value="1" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>1</button>
-      <button  className="numberButton" value="2" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>2</button>
-      <button  className="numberButton" value="3" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>3</button>
-      <button  className="numberButton" value="4" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>4</button>
-      <button  className="numberButton" value="5" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>5</button>
-      <button  className="numberButton" value="6" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>6</button>
-      <button  className="numberButton" value="7" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>7</button>
-      <button  className="numberButton" value="8" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>8</button>
-      <button  className="numberButton" value="9" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>9</button>
-      <button  className="numberButton" value="0" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>0</button>
+      <button className="numberButton" value="1" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>1</button>
+      <button className="numberButton" value="2" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>2</button>
+      <button className="numberButton" value="3" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>3</button>
+      <button className="numberButton" value="4" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>4</button>
+      <button className="numberButton" value="5" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>5</button>
+      <button className="numberButton" value="6" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>6</button>
+      <button className="numberButton" value="7" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>7</button>
+      <button className="numberButton" value="8" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>8</button>
+      <button className="numberButton" value="9" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>9</button>
+      <button className="numberButton" value="0" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>0</button>
+      <button className="resultButton" value="=" onClick={tempVal => setNumberValue(eval(numberValue))}>=</button>
     </div>
   );
 
