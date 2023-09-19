@@ -5,7 +5,7 @@ function App() {
   const inputRef = useRef(null);//to access number input in the input form
   const buttonRef = useRef(null);//i'm not sure if this is the correct way
   const [result, setResult] = useState(0);//this is a calculator app, it is bound to have one variable to keep result to do with future operations
-  const [numberValue, setNumberValue] = useState(0);
+  const [numberValue, setNumberValue] = useState("");
 
   function plus(){
     //result = result + Number(inputRef.current.value); okay i try this out of curiosity, to know what will be the error now i know
