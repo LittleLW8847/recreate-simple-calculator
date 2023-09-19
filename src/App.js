@@ -56,7 +56,7 @@ function App() {
       <button onClick={resetResult}>Reset Result</button>
       <button onClick={resetInput}>Reset Input</button>
       
-      <button  className="numberButton" value="1" onClick={tempVal => setNumberValue(tempVal + tempVal.target.value)}>1</button>
+      <button  className="numberButton" value="1" onClick={tempVal => setNumberValue(numberValue + tempVal.target.value)}>1</button>
       <button  className="numberButton" value="2">2</button>
       <button  className="numberButton" value="3">3</button>
       <button  className="numberButton" value="4">4</button>
