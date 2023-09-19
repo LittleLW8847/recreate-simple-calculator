@@ -5,7 +5,8 @@ function App() {
   const inputRef = useRef(null);//to access number input in the input form
   const buttonRef = useRef(null);//i'm not sure if this is the correct way
   const [result, setResult] = useState(0);//this is a calculator app, it is bound to have one variable to keep result to do with future operations
-  
+  const [numberValue, setNumberValue] = useState(0);
+
   function plus(){
     //result = result + Number(inputRef.current.value); okay i try this out of curiosity, to know what will be the error now i know
     setResult((result) => result + Number(inputRef.current.value));
@@ -45,6 +46,7 @@ function App() {
   return (
     <div>
       <h1>Simple Calculator</h1>
+      <p>here is your input: {numberValue}</p>
       <p>Result: {result}</p>
       <input pattern="[0-9]" type="number" placeholder="your number, please" ref={inputRef}></input>
       <button onClick={plus}>Add</button>
@@ -54,16 +56,16 @@ function App() {
       <button onClick={resetResult}>Reset Result</button>
       <button onClick={resetInput}>Reset Input</button>
       
-      <button  className="numberButton">1</button>
-      <button  className="numberButton">2</button>
-      <button  className="numberButton">3</button>
-      <button  className="numberButton">4</button>
-      <button  className="numberButton">5</button>
-      <button  className="numberButton">6</button>
-      <button  className="numberButton">7</button>
-      <button className="numberButton">8</button>
-      <button  className="numberButton">9</button>
-      <button  className="numberButton">0</button>
+      <button  className="numberButton" value="1" onClick={setNumberValue()}>1</button>
+      <button  className="numberButton" value="2">2</button>
+      <button  className="numberButton" value="3">3</button>
+      <button  className="numberButton" value="4">4</button>
+      <button  className="numberButton" value="5">5</button>
+      <button  className="numberButton" value="6">6</button>
+      <button  className="numberButton" value="7">7</button>
+      <button  className="numberButton" value="8">8</button>
+      <button  className="numberButton" value="9">9</button>
+      <button  className="numberButton" value="0">0</button>
     </div>
   );
 
